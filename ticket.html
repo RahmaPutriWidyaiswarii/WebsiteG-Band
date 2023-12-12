@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="gambar/bp logo.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/eeb0128020.js" crossorigin="anonymous"></script>
+    <title>Rahma Putri</title>
+    <style>
+        /* CSS INTERNAL: yang mengatur style scroll on top  */
+        #to-top{
+            background: rgb(217, 54, 236);
+            position: fixed;
+            right: 32px;
+            bottom: 16px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            color: #1518ca;
+            text-decoration: none;
+            pointer-events: none;
+            opacity:0;
+            transition:all 0.4s;
+            z-index:2;
+        }
+        #to-top:hover{
+            background:#fffefe
+        }
+        #to-top.active{
+            bottom: 32px;
+            pointer-events: auto;
+            opacity:1;
+        }
+
+        /* CSS INTERNAL: yang mengatur style slide show*/
+       /* jadwal */
+       .mySlides {
+            display: none;
+        }
+
+        .fade img {
+            vertical-align: middle;
+            border-radius: 25px;
+        }
+
+        /* Slideshow container */
+        .slideshow-container {
+            max-width: 50%;
+            position: relative;
+            margin: auto;
+            
+        }
+
+        /* Next & previous buttons */
+        .prev,
+        .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+        }
+
+        /* Position the "next button" to the right */
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        /* On hover, add a black background color  */
+        .prev:hover,
+        .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        /* Caption text */
+        .text {
+            color: #f2f2f2;
+            font-size: 15px;
+            padding: 8px 12px;
+            position: absolute;
+            bottom: 8px;
+            width: 100%;
+            text-align: center;
+        }
+
+        /* Number text (1/3 etc) */
+        .numbertext {
+            color: #f2f2f2;
+            font-size: 12px;
+            padding: 8px 12px;
+            position: absolute;
+            top: 0;
+        }
+
+        /* Fading animation pada tagslider */
+        .fade {
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+        /* Untuk Tabel */
+        table, tr, th, td {
+            border: 3px solid black;
+            text-align: center;
+            background-color: rgb(255, 201, 255);
+        }
+        th, td {
+            padding: 10px;
+        }
+        td.form{
+            text-align: left;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- emote cium -->
+    <!-- html scrool on top pake font awesome -->
+    <a href="" id="to-top">
+        <i class="fa-solid fa-face-kiss-wink-heart"></i>
+    </a>
+    <nav>
+        <a href="#" class="brand">Black Pink</a>
+        <!-- html list -->
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="ticket.html#footer">About</a></li>
+            <li><a href="#">Events</a></li>
+            <li><a href="index.html#footer">Contact</a></li>
+            <li><a href="ticket.html">Ticket</a></li>
+        </ul>
+        <a class="menu">
+            <div class="bar bar-1"></div>
+            <div class="bar bar-2"></div>
+            <div class="bar bar-3"></div>
+        </a>
+    </nav>
+    <div class="spanduk">
+        <div class="sliders">
+            <div class="rii_spanduk">
+                <!-- html img -->
+                <img src="gambar/HERO.jpg" alt="">
+            </div>
+            <div class="rii_spanduk">
+                <img src="gambar/HERO1.jpg" alt="">
+            </div>
+            <div class="rii_spanduk">
+                <img src="gambar/HERO2.jpg" alt="">
+            </div>
+            <div class="rii_spanduk">
+                <img src="gambar/HERO3.jpg" alt="">
+            </div>
+            <div class="rii_spanduk">
+                <img src="gambar/HERO4.JPG" alt="">
+            </div>
+        </div>
+    </div>
+<!-- section; tag semantic -->
+    </section><br>
+    <!-- text jalan otomatis -->
+    <marquee behavior="" direction="">Website ini hanya melayani pembelian online, untuk pembelian offline silahkan
+        datang di booth ticket. Diharapkan kepada pembeli online untuk stay di web ini agar mengetahui informasi lebih
+        lanjut <i style="color: pink" class="fa-solid fa-heart"></i> <i class="fa-regular fa-heart"></i> <i
+            style="color: pink" class="fa-solid fa-heart"></i> <i class="fa-regular fa-heart"></i> <i
+            class="fa-solid fa-face-smile-hearts"></i> <i style="color: pink"
+            class="fa-solid fa-face-kiss-wink-heart"></i> <i class="fa-solid fa-face-kiss-wink-heart"></i></marquee>
+
+    <!-- untuk informasi pembelian-->
+    <section id="informasi">
+        <div class="kolom2">
+            <h2>Pembelian Tiket Online</h2>
+            <p><u><b>SILAHKAN MENGISI DATA DIRI DIBAWAH INI!</b></u></p>
+            <table>
+                <tr>
+                    <th colspan="2">TIKET BLACKPINK</th>
+                </tr>
+                <tr>
+                    <td class="form">
+                        <label for="nama">Nama: </label>
+                        <input type="text" id="name" name="nama"></input>
+                        <br>
+                        <label for="kelas">Kelas: </label>
+                        <select name="kelas" id="kelas">
+                            <option value="100000">VVIP</option>
+                            <option value="150000">VIP</option>
+                            <option value="200000">REGULAR</option>
+                        </select>
+                        <br>
+                        <label for="jumlah">Jumlah Tiket: </label>
+                        <input type="number" id="total" name="jumlah"></input>
+                        <br>
+                        <label for="anggota">Member: Iya </label>
+                        <input type="checkbox" id="member" name="anggota"></input>
+                    </td>
+                    <td class="form">
+                        <label for="harga">Harga Tiket: </label>
+                        <input type="text" id="price" name="harga"></input>
+                        <br>
+                        <label for="totalHarga">Sub Total: </label>
+                        <input type="text" id="totalPrice" name="totalHarga"></input>
+                        <br>
+                        <label for="diskon">Diskon: </label>
+                        <input type="text" id="discount" name="diskon"></input>
+                        <br>
+                        <label for="totalBayar">Total Bayar: </label>
+                        <input type="text" id="totalPayment" name="totalBayar"></input>
+                        <br>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <button onclick="hitung()">Hitung</button>
+                        <button onclick="ulang()">Ulang</button>
+                    </td>
+                </tr>
+            </table>
+        </body>
+        </div>
+        <div class="bp4">
+        <img src="gambar/bp4.png" /></div><br>
+    </section>
+
+    <!-- untuk mengatur tabel pada jadwal dan tempat menjadi slideshow dan mengatur style -->
+    <!-- html slideshow -->
+    <div class="slideshow-container">
+        <center>
+            <div>
+                <h2>Jadwal & Tempat</h2>
+            </div>
+        </center>
+        <div class="mySlides fade">
+            <img src="gambar/01.png" style="width:100%">
+        </div>
+
+        <div class="mySlides fade">
+            <img src="gambar/02.png" style="width:100%">
+        </div>
+
+        <div class="mySlides fade">
+            <img src="gambar/03.png" style="width:100%">
+        </div>
+        <!-- untuk membuat gambar bisa di next ke gambar selanjutnya -->
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+
+    </div><br><br>
+
+    </section>
+    <!-- untuk memanggil gambar pd bagian members -->
+    <div class="tutor-list">
+        <div class="tengah">
+            <div class="kolom1">
+                <h2>ENTERTAIMENT</h2>
+                <p><b>Entertaiment member G-Band</b></p>
+            </div><br><br>
+        <!-- untuk memanggil gambar member blackpink -->
+            <div class="tutor-list">
+                <div class="kartu-tutor">
+                    <img src="gambar/4.png" />
+                    <p>YG Entertaiment</p>
+                </div>
+                <div class="kartu-tutor">
+                    <img src="gambar/logosm.jpg" />
+                    <p>SM Entertaiment</p>
+                </div>
+                <div class="kartu-tutor">
+                    <img src="gambar/logojyp.jpg" />
+                    <p>JYP Entertaimen</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section><br><br>
+    <!-- mengatur video -->
+    <div class="vidio">
+        <div class="video">
+            <h3>BLACK PINK</h3>
+           <video controls width="100%" height="300px">
+            <source src="vid/vidbp.mp4" type="video/mp4">
+            </video> 
+        </div>
+        <div class="video">
+            <h3>RED VELVET</h3>
+           <video controls width="100%" height="300px">
+            <source src="vid/vidrv.mp4" type="video/mp4">
+            </video> 
+        </div>
+        <div class="video">
+            <h3>TWICE</h3>
+            <video controls width="100%" height="300px">
+             <source src="vid/vidwt.mp4" type="video/mp4">
+             </video> 
+         </div>
+         <div class="video">
+            <h3>SNSD</h3>
+            <video controls width="100%" height="300px">
+             <source src="vid/vidsnsd.mp4" type="video/mp4">
+             </video> 
+         </div>
+         <div class="video">
+            <h3>AESPA</h3>
+            <video controls width="100%" height="300px">
+             <source src="vid/vidaespa.mp4" type="video/mp4">
+             </video> 
+         </div>
+    </div>
+
+    <!-- brand -->
+    <!-- untuk membuat container lebih kecil pada bagian partners -->
+    <div class="brand">
+        <div class="smallkontainer">
+            <h1 style="text-align: center;">Partners</h1>
+            <div class="row">
+                <div class="col-5">
+                    <img src="gambar/1.png" alt="">
+                </div>
+                <div class="col-5">
+                    <img src="gambar/2.png" alt="">
+                </div>
+                <div class="col-5">
+                    <img src="gambar/3.png" alt="">
+                </div>
+                <div class="col-5">
+                    <img src="gambar/4.png" alt="">
+                </div>
+                <div class="col-5">
+                    <img src="gambar/5.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer id="footer">
+        <div class="main-content">
+            <div class="left box">
+                <h2>About Us</h2>
+                <div class="content">
+                    <p>Website ini menginformasikan Jadwal dan tiket pembelian konser BLACKPINK. Silahkan </p>
+                    <div class="social">
+                        <a href="#"><span style="color:rgba(137, 43, 226, 0.489)" class="fa fa-facebook-f"></span></a>
+                        <a href="#"><span style="color:rgba(137, 43, 226, 0.489)" class="fa fa-twitter"></span></a>
+                        <a href="#"><span style="color:rgba(137, 43, 226, 0.489)" class="fa fa-instagram"></span></a>
+                        <a href="#"><span style="color:rgba(137, 43, 226, 0.489)" class="fa fa-youtube"></span></a>
+                    </div>
+                </div>
+            </div>
+            <div class="center box">
+                <!-- span untuk mengatur ikon -->
+                <h2>Address</h2>
+                <div class="content">
+                    <div class="place">
+                        <span style="color:rgba(137, 43, 226, 0.489)" class="fas fa-map-marker-alt"></span>
+                        <span class="text1">397-5 Hapjeong-dong, Mapo-gu, Seoul, South Korea</span>
+                    </div>
+                    <div class="phone">
+                        <span style="color:rgba(137, 43, 226, 0.489)" class="fas fa-phone-alt"></span>
+                        <span class="text1">0895395136695</span>
+                    </div>
+                    <div class="email">
+                        <span style="color:rgba(137, 43, 226, 0.489)" class="fas fa-envelope"></span>
+                        <span class="text1">itsvanilla08@gmail.com</span>
+                    </div>
+                </div>
+            </div>
+            <div class="right box">
+                <h2>Contact Us</h2>
+                <div class="content">
+                    <form action="#">
+                        <div class="email">
+                            <div class="text1">
+                                Email *
+                            </div>
+                            <input style="color:white" type="email" required>
+                        </div>
+                        <div class="msg">
+                            <div class="text1">
+                                Message *
+                            </div>
+                            <textarea style="color:white" name="" id="" cols="25" rows="2" required></textarea>
+                        </div>
+                        <div class="btn_1">
+                            <button type="submit">Send</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div><br>
+        <div class="bottom">
+            <center>
+                <span class="credit">Created By <a href="https://www.instagram.com/rahmaaputriiw/">Rahmacute</a>|</span>
+                <span class="far fa-copyright"> 2022 </span>
+            </center>
+        </div>
+    </footer>
+
+    <script>
+        // js untuk memanggil sticky
+        var nav = document.querySelector('nav');
+        // untuk membuat nav warna pink
+        window.onscroll = () => { 
+
+            if (window.pageYOffset > 0) {
+                nav.classList.add("sticky")
+            }
+            else {
+                nav.classList.remove("sticky");
+            }
+        }
+
+        let menuBars = document.querySelector('.menu');
+
+        menuBars.onclick = () => {
+            menuBars.classList.toggle('active');
+            nav.classList.toggle("active");
+        }
+
+// js untuk srool on top
+        const toTop = document.querySelector("#to-top");
+
+        window.addEventListener("scroll",() =>{
+            if (window.pageYOffset > 100){
+                toTop.classList.add("active");
+
+            }else{
+                toTop.classList.remove("active");
+            }            
+        })
+// script telah dieksekusi
+    </script>
+    <!-- js untuk form pembelian tiket -->
+    <script>
+    var nam = document.getElementById("name");
+    var kelas = document.getElementById("kelas");
+    var tot = document.getElementById("total");
+    var mem = document.getElementById("member");
+    var pri = document.getElementById("price");
+    var totalP = document.getElementById("totalPrice");
+    var disc = document.getElementById("discount");
+    var totalB = document.getElementById("totalPayment");
+
+    function show(){
+        console.log(kelas.value)
+        console.log(mem.checked)
+    }
+    function hitung(){
+        var diskon = 0;
+        pri.value = kelas.value
+        totalP.value = Number(pri.value) * Number(tot.value)
+        if (mem.checked) {
+            diskon = Number(totalP.value) * 0.1
+            disc.value = diskon
+            totalB.value = Number(totalP.value) - diskon
+        } else {
+            disc.value = "Tidak ada Diskon"
+            totalB.value = Number(totalP.value)
+        }
+    }
+    function ulang(){
+        mem.checked = false
+        tot.value = 0
+        nam.value = ""
+        pri.value = ""
+        totalP.value = ""
+        disc.value = ""
+        totalB.value = ""
+    }
+
+</script>
+    <script src="jalan1.js"></script>
+</body>
+
+</html>
